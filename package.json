@@ -1,0 +1,38 @@
+{
+  "name": "ifaca",
+  "version": "0.1.0",
+  "description": "An explanation function executor, support a variety of functions, such as batch replacement file, batch replacement content, batch execution command. These functions can be reversed, can be increased or decreased, like a chain of atoms. 一个解释功能的执行器，支持多种功能，比如 批量替换文件，批量替换内容，批量执行命令。这些功能是可以调换顺序，可以增加，也可以减少，就像原子组成的链。",
+  "main": "./src/main.js",
+  "bin": {
+    "ifaca": "./commonjs/lib-bin/ifaca.js"
+  },
+  "scripts": {
+    "start": "npm run build && node ./commonjs/lib-bin/ifaca.js",
+    "build": "npx babel src --out-dir ./commonjs/lib && npx babel bin --out-dir ./commonjs/lib-bin"
+  },
+  "keywords": [
+    "ifaca"
+  ],
+  "author": "aiyoudiao",
+  "license": " GPL-3.0 license",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "glob": "^10.3.10",
+    "mime": "^3.0.0",
+    "ora": "^5.4.1",
+    "signale": "^1.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aiyoudiao/free-atom-chain-actuator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aiyoudiao/free-atom-chain-actuator/issues"
+  },
+  "homepage": "https://github.com/aiyoudiao/free-atom-chain-actuator#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.3",
+    "@babel/preset-env": "^7.23.3"
+  }
+}

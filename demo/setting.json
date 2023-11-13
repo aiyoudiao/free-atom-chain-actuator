@@ -1,0 +1,85 @@
+[
+  {
+    "name": "replace-in-files",
+    "type": "replace-in-files",
+    "description": "replace-in-files",
+    "setting": [
+      {
+        "description": "replace-in-files 1",
+        "oldContents": ["aiyoudiao", "2023"],
+        "newContents": ["m2", "2024"],
+        "dirPaths": ["./temp1"],
+        "textFileExtensions": [".js", ".html", ".css", ".txt"],
+        "textMimeTypes": [
+          "text/javascript",
+          "text/html",
+          "text/css",
+          "text/plain"
+        ]
+      },
+      {
+        "description": "replace-in-files 2",
+        "oldContents": ["aiyoudiao"],
+        "newContents": ["m2"],
+        "dirPaths": ["./temp2"],
+        "textFileExtensions": [".js", ".html", ".css", ".txt"],
+        "textMimeTypes": [
+          "text/javascript",
+          "text/html",
+          "text/css",
+          "text/plain"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "replace-files",
+    "type": "replace-files",
+    "description": "replace-files",
+    "setting": [
+      {
+        "description": "replace-files",
+        "oldDirPaths": ["temp1", "temp2"],
+        "oldFullFileNames": [
+          "temp.css",
+          "temp.html",
+          "temp.js",
+          "temp.scss",
+          "temp.txt"
+        ],
+        "newDirPaths": ["temp3"],
+        "newFullFileNames": [
+          "tmp.css",
+          "tmp.html",
+          "tmp.js",
+          "tmp.scss",
+          "tmp.txt"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "batch-cmd:parallel",
+    "type": "batch-cmd:parallel",
+    "description": "batch-cmd:parallel",
+    "setting": [
+      {
+        "description": "batch-cmd:parallel",
+        "dirPaths": ["./temp1", "./temp2", "./temp3"],
+        "commands": ["pwd", "touch index.temp", "rm temp.html"]
+      }
+    ]
+  },
+  {
+    "name": "batch-cmd:sequential",
+    "type": "batch-cmd:sequential",
+    "description": "batch-cmd:sequential",
+    "setting": [
+      {
+        "description": "batch-cmd:sequential",
+        "dirPaths": ["./temp1", "./temp2", "./temp3"],
+        "commands": ["pwd", "touch index.temp", "rm temp.html"]
+      }
+    ]
+  }
+]
